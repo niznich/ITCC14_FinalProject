@@ -41,38 +41,46 @@
 }
 
 .header .login-container {
+	
   float: right;
 }
 
 .header input[type=text] {
-  padding: 6px;
+  padding: 5px 10px;
   margin-top: 8px;
-  font-size: 17px;
+  font-size: 11px;
   border: none;
   width:120px;
 }
 
 .header input[type=password] {
-  padding: 6px;
+  padding: 5px 10px;
   margin-top: 8px;
-  font-size: 17px;
+  font-size: 11px;
   border: none;
   width:120px;
 }
 .header .login-container button {
-  float: right;
-  padding: 6px 10px;
+ 
+  padding: 5px 10px;
   margin-top: 8px;
-  margin-right: 16px;
+  margin-right: 12px;
   background-color: #555;
   color: white;
-  font-size: 17px;
+  font-size: 15px;
   border: none;
   cursor: pointer;
 }
 
 .header .login-container button:hover {
   background-color: gold;
+}
+
+.logoutLblPos{
+
+   position:fixed;
+   right:10px;
+   top:5px;
 }
 
 * {
@@ -110,20 +118,3 @@
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
-
-
-
