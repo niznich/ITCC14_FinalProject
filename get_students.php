@@ -19,7 +19,8 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html>
 <head>
 <link rel = "stylesheet" href = "assets/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel = "stylesheet" href = "assets/font-awesome/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title> Xavier University - Office of Student Affairs </title>	
 </head>
@@ -41,7 +42,19 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <br>
 <br>
 <br>
-<h1 style="text-align:center">STUDENT RECORDS</h1>
+<h1 style="text-align:center; ">STUDENT RECORDS</h1>
+<div style="text-align: right;">
+<a style="background-color: white;
+  color: black;
+  border: 2px solid #555555;  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  " id="add_buttn" href="add_students.php" type="submit" ><i class="fa fa-plus-square" style="font-size:35px;color:black"></i></a>
+  </div>
 <hr>
 <div class="container">
 <table>
@@ -68,14 +81,26 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?=$student['is_enrolled']?></td>
                 <td><?=$student['violation']?></td>
                 <td>
-                <a href="update_students.php?student_id=<?=$student['student_id']?>"><i class="fa fa-edit" style="font-size:35px;color:black"></i></a>
-                <!-- <a href="update.php?id=<?=$contact['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a> -->
-                </td>
+                <a href="update_students.php?student_id=<?=$student['student_id']?>"><i class="fa fa-pencil-square-o" style="font-size:35px;color:black"></i></a>
+                <a href="delete_students.php?student_id=<?=$student['student_id']?>" onclick="return confirm('Are you sure to delete this student?')"><i class="fa fa-trash-o" style="font-size:35px;color:black"></i></a>
+            </td>
             </tr>
             <?php endforeach; ?>
-        </tbody>
+        </tbody> 
     </table>
 
 
 </body>
 </html>
+
+<script>
+function confirmationDelete(anchor)
+{
+   var conf = confirm('Are you sure want to delete this record?');
+   if(conf){
+      window.location=anchor.attr("href");
+   }else{
+      window.location="get_students.php";
+   }
+}
+ </script>

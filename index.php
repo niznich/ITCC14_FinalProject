@@ -33,10 +33,11 @@ $contacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class = "header"> 
 <img src = "assets/XU Logo.png" id="leftImageXU" />
 	<div class="login-container">
-		<form action="StudentRecords.html">
-			<input type="text" placeholder="Username" name="username" value="osa@xu.edu.ph">
-			<input type="password" placeholder="Password" name="psw" value="mypassw@rd">
-			<a id="log_a" href="get_students.php" type="submit" value="Login">Login</a>
+		<form action="login.php" method="post">
+			<input type="text" placeholder="Username" name="username" >
+			<input type="password" placeholder="Password" name="password" >
+            <input type="submit" value="Login">
+            <!-- <a id="log_a" href="get_students.php" type="submit" value="Login">Login</a> -->
 		</form>
 	</div>
 </div>

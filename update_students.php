@@ -74,15 +74,15 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="container">
 <form action="update_students.php?student_id=<?=$student['student_id']?>" method="post">
         <label for="id">ID</label>
-        <input type="text" name="student_id" placeholder="1" value="<?=$student['student_id']?>" id="student_id">
+        <input type="text" name="student_id"  value="<?=$student['student_id']?>" id="student_id">
         <label for="name">Name</label>
-        <input type="text" name="name" placeholder="1" value="<?=$student['name']?>" id="name">
+        <input type="text" name="name"  value="<?=$student['name']?>" id="name">
         <label for="email">Email</label>
-        <input type="text" name="email" placeholder="1" value="<?=$student['email']?>" id="email">
+        <input type="text" name="email"  value="<?=$student['email']?>" id="email">
         <label for="Year">Year</label>
-        <input type="text" name="year" placeholder="1" value="<?=$student['year']?>" id="year">
+        <input type="text" name="year"  value="<?=$student['year']?>" id="year">
         <label for="Course">Course</label>
-        <input type="text" name="course" placeholder="1" value="<?=$student['course']?>" id="course">
+        <input type="text" name="course"  value="<?=$student['course']?>" id="course">
         <label for="Is Enrolled?">Is Enrolled?</label>
         <select style="width: 100%;
   padding: 12px 20px;
@@ -108,8 +108,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <option value=" ">----- PLEASE SELECT -----</option>
             <option value="Yes">Yes</option>
             <option value="None">None</option>
-        </select>
-        </div>
+        </select>        </div>
         <!-- <input type="text" name="violation" placeholder="1" value="<?=$student['violation']?>" id="violation"> -->
         <input type="submit" value="Update">
     </form>
