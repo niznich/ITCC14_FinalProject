@@ -26,7 +26,9 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
     <div class = "header_2"> 
     <img src = "assets/XU Logo.png" id="leftImageXU" />
-
+    <a href="rest_con.php" style="color: white;
+    padding-left: 50px;
+    padding-bottom: 20px;">SAMPLE CONNECT</a>
     </div>
 <div class="footer">
   <p> <footer>&copy;2020</footer> </p>
